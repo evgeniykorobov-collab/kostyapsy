@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://klimov-psy.ru';
+const BASE_URL = 'https://kostyapsy.ru';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
@@ -13,8 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/uslugi/ekzistencialnyj-tupik', priority: 0.8 },
     { url: '/uslugi/ostrye-sostoyaniya', priority: 0.8 },
     { url: '/metody', priority: 0.7 },
-    { url: '/biblioteka', priority: 0.6 },
-    { url: '/nauka', priority: 0.6 },
     { url: '/blog', priority: 0.7 },
     { url: '/kontakty', priority: 0.7 },
     { url: '/privacy-policy', priority: 0.3 },

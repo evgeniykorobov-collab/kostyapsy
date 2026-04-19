@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Send, MapPin, Clock } from 'lucide-react';
+import { Send, MapPin, Clock, Phone, Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Контакты | Константин Альбертович, кризисный психолог',
@@ -57,6 +57,40 @@ export default function ContactsPage() {
               >
                 Оставить заявку
               </Link>
+            </div>
+
+            <div className="card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ width: '56px', height: '56px', borderRadius: '16px', backgroundColor: 'var(--color-bg-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Phone size={28} color="var(--color-accent-life)" />
+              </div>
+              <h3 style={{ fontSize: '1.4rem', margin: 0 }}>Телефон</h3>
+              <p style={{ color: 'var(--color-text-light)', margin: 0, lineHeight: 1.6 }}>
+                Звонок или СМС — если удобнее голосом.
+              </p>
+              <a
+                href="tel:+79954364645"
+                className="btn btn-secondary"
+                style={{ alignSelf: 'flex-start', marginTop: '8px' }}
+              >
+                +7 995 436-46-45
+              </a>
+            </div>
+
+            <div className="card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ width: '56px', height: '56px', borderRadius: '16px', backgroundColor: 'var(--color-bg-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Mail size={28} color="var(--color-accent-women)" />
+              </div>
+              <h3 style={{ fontSize: '1.4rem', margin: 0 }}>Email</h3>
+              <p style={{ color: 'var(--color-text-light)', margin: 0, lineHeight: 1.6 }}>
+                Для развёрнутых писем и документов.
+              </p>
+              <a
+                href="mailto:apinyan.kostya@yandex.ru"
+                className="btn btn-secondary"
+                style={{ alignSelf: 'flex-start', marginTop: '8px', wordBreak: 'break-all' }}
+              >
+                apinyan.kostya@yandex.ru
+              </a>
             </div>
 
             <div className="card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '16px', gridColumn: '1 / -1' }}>

@@ -5,6 +5,8 @@ export default function JsonLd() {
     name: 'Константин Альбертович — кризисный психолог',
     description: 'Кризисный психолог. Помощь в острых состояниях — развод, потеря, выгорание, экзистенциальный тупик. Авторский метод «Навигация в Хаосе».',
     url: 'https://kostyapsy.ru',
+    telephone: '+7-995-436-46-45',
+    email: 'apinyan.kostya@yandex.ru',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Ростов-на-Дону',

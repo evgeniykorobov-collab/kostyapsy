@@ -39,6 +39,8 @@ export default function Footer() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             <h4 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px' }}>Контакты</h4>
             <a href="https://t.me/SouL_See_You" target="_blank" rel="noopener noreferrer" className="footer-link">Telegram: @SouL_See_You</a>
+            <a href="tel:+79954364645" className="footer-link">+7 995 436-46-45</a>
+            <a href="mailto:apinyan.kostya@yandex.ru" className="footer-link" style={{ wordBreak: 'break-all' }}>apinyan.kostya@yandex.ru</a>
             <Link href="/zapis" className="footer-link">Запись на консультацию</Link>
           </div>
 
