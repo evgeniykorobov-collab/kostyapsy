@@ -56,5 +56,8 @@ site-structure.md
 /photo_*.jpeg
 /photo_*.png
 
+# персональные документы (дипломы, сертификаты) — никогда не пушить
+*.pdf
+
 # claude code internal state
 /.claude/
