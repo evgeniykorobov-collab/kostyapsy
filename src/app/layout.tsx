@@ -10,7 +10,7 @@ const lora = Lora({ subsets: ['cyrillic', 'latin'], variable: '--font-lora' });
 const inter = Inter({ subsets: ['cyrillic', 'latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'Страхи и таланты | Кризисный психолог Константин Альбертович',
+  title: 'Константин Альбертович — кризисный психолог | Навигация в Хаосе',
   description: 'Кризисный психолог. Помогаю, когда «всё пропало» — и возвращаю вкус жизни. Авторский метод «Навигация в Хаосе». Развод, потеря, выгорание, экзистенциальный тупик.',
 };
 

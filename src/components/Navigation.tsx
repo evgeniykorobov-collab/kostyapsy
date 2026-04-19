@@ -23,8 +23,8 @@ export default function Navigation() {
   return (
     <nav style={{ position: 'sticky', top: 0, zIndex: 50, backgroundColor: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(10px)', borderBottom: '1px solid #eaeaea' }}>
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '70px' }}>
-        <Link href="/" onClick={closeMenus} style={{ fontFamily: 'var(--font-lora)', fontSize: '24px', fontWeight: 600, color: 'var(--color-text-main)' }}>
-          Страхи и таланты
+        <Link href="/" onClick={closeMenus} style={{ fontFamily: 'var(--font-lora)', fontSize: '22px', fontWeight: 600, color: 'var(--color-text-main)', lineHeight: 1.1 }}>
+          Константин Альбертович
         </Link>
 
         {/* Desktop Menu */}
@@ -51,10 +51,9 @@ export default function Navigation() {
               )}
             </AnimatePresence>
           </div>
-          <Link href="/metody" className="nav-link">Методы работы</Link>
-          <Link href="/biblioteka" className="nav-link">Библиотека</Link>
-          <Link href="/nauka" className="nav-link">Наука</Link>
+          <Link href="/metody" className="nav-link">Метод</Link>
           <Link href="/blog" className="nav-link">Блог</Link>
+          <Link href="/kontakty" className="nav-link">Контакты</Link>
           <Link href="/zapis" className="btn" style={{ marginLeft: '16px', padding: '10px 20px' }}>Записаться</Link>
         </div>
 
@@ -87,11 +86,10 @@ export default function Navigation() {
                 </div>
               </div>
 
-              <Link href="/metody" onClick={closeMenus} className="mobile-nav-link">Методы работы</Link>
-              <Link href="/biblioteka" onClick={closeMenus} className="mobile-nav-link">Библиотека</Link>
-              <Link href="/nauka" onClick={closeMenus} className="mobile-nav-link">Наука</Link>
+              <Link href="/metody" onClick={closeMenus} className="mobile-nav-link">Метод</Link>
               <Link href="/blog" onClick={closeMenus} className="mobile-nav-link">Блог</Link>
-              
+              <Link href="/kontakty" onClick={closeMenus} className="mobile-nav-link">Контакты</Link>
+
               <Link href="/zapis" onClick={closeMenus} className="btn" style={{ width: '100%', marginTop: '16px', justifyContent: 'center' }}>Записаться на консультацию</Link>
             </div>
           </motion.div>

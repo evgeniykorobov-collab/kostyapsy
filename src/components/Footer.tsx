@@ -8,11 +8,11 @@ export default function Footer() {
           
           {/* Brand & Rights */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <Link href="/" style={{ fontFamily: 'var(--font-lora)', fontSize: '24px', fontWeight: 600 }}>
-              Страхи и таланты
+            <Link href="/" style={{ fontFamily: 'var(--font-lora)', fontSize: '22px', fontWeight: 600, lineHeight: 1.1 }}>
+              Константин Альбертович
             </Link>
             <p style={{ color: 'var(--color-text-light)', fontSize: '14px', lineHeight: 1.5 }}>
-              Константин Альбертович — кризисный психолог. Переводчик с языка Боли на язык Жизни. Авторский метод «Навигация в Хаосе».
+              Кризисный психолог. Переводчик с языка Боли на язык Жизни. Авторский метод «Навигация в Хаосе».
             </p>
           </div>
 
@@ -20,10 +20,9 @@ export default function Footer() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             <h4 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px' }}>Навигация</h4>
             <Link href="/about" className="footer-link">О специалисте</Link>
-            <Link href="/metody" className="footer-link">Методы работы</Link>
-            <Link href="/biblioteka" className="footer-link">Библиотека</Link>
-            <Link href="/nauka" className="footer-link">Научная база</Link>
+            <Link href="/metody" className="footer-link">Метод</Link>
             <Link href="/blog" className="footer-link">Блог</Link>
+            <Link href="/kontakty" className="footer-link">Контакты</Link>
           </div>
 
           {/* Services */}
@@ -46,7 +45,7 @@ export default function Footer() {
         </div>
         
         <div style={{ borderTop: '1px solid #ddd', paddingTop: '24px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '16px', color: 'var(--color-text-light)', fontSize: '14px' }}>
-          <div>&copy; 2026 Страхи и таланты. Все данные конфиденциальны.</div>
+          <div>&copy; 2026 Константин Альбертович. Все данные конфиденциальны.</div>
           <Link href="/privacy-policy" className="footer-link">Политика конфиденциальности</Link>
         </div>
       </div>

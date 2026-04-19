@@ -1,54 +1,102 @@
 import { Metadata } from 'next';
-import { ArrowRight } from 'lucide-react';
+import { LifeBuoy, Compass, Anchor, Lightbulb, Sparkles, Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Блог | Константин Альбертович, кризисный психолог',
-  description: 'Статьи о кризисах, разводах, потерях, выгорании, острых состояниях и методе «Навигация в Хаосе». Без воды и утешений — конкретика.',
+  description: 'Пять рубрик: «Аптечка первой помощи», «Архитектура чувств», «Навигация в Хаосе», «Маяк в пути», «Вкус жизни». Без воды и эзотерики — только то, что работает.',
+};
+
+type Topic = string;
+type Rubric = {
+  num: string;
+  icon: React.ComponentType<{ size?: number; color?: string }>;
+  iconColor: string;
+  title: string;
+  subtitle: string;
+  forWhom: string;
+  topics: Topic[];
 };
 
 export default function BlogPage() {
-  const articles = [
+  const rubrics: Rubric[] = [
     {
-      title: '«Навигация в Хаосе»: почему работает и как устроена',
-      tag: 'Метод',
-      desc: 'Четыре этапа — Якорение, Вербализация, Инвентаризация, Заземление. Почему в кризисе порядок шагов важнее любой техники.',
-      date: 'Апрель 2026',
+      num: '01',
+      icon: LifeBuoy,
+      iconColor: 'var(--color-accent-ras)',
+      title: 'Аптечка первой помощи',
+      subtitle: 'Скорая психологическая помощь',
+      forWhom: 'Для тех, кому больно прямо сейчас. Чёткие инструкции, как пережить ближайшие 24–48 часов.',
+      topics: [
+        'Что делать в первые 24 часа после того, как вас бросили — пошаговая инструкция выживания',
+        'Паническая атака: 5 шагов, чтобы вернуть контроль над телом',
+        '«Меня уволили». Экстренный финансовый и эмоциональный план на неделю',
+        'Как отличить усталость от депрессии — простой чек-лист для самодиагностики',
+        'Что сказать себе, когда кажется, что выхода нет — фразы-якоря',
+        'Как уснуть, когда мысли крутятся',
+      ],
     },
     {
-      title: 'Первые 72 часа после развода: карта действий',
-      tag: 'Развод',
-      desc: 'Что делать, когда разговор состоялся и дом рухнул. Не про чувства — про конкретику: документы, деньги, дети, сон. И почему именно 72 часа.',
-      date: 'Апрель 2026',
+      num: '02',
+      icon: Compass,
+      iconColor: 'var(--color-accent-women)',
+      title: 'Архитектура чувств',
+      subtitle: 'Перевод с языка Хаоса',
+      forWhom: 'Для тех, кто чувствует внутри «кашу», но не может подобрать слов.',
+      topics: [
+        'Словарь кризисных состояний: чем тревога отличается от страха, а тоска — от печали',
+        '«Я не знаю, чего хочу» — инструкция по сборке себя заново',
+        'Почему мы боимся тишины и как она лечит',
+        'Гнев, который мы прячем: как распознать подавленную агрессию и направить её в дело',
+        'Обида как способ управления: разбираем механизм и учимся выходить из игры',
+        'Эмоциональное выгорание — не модный диагноз, а реальный сбой системы',
+      ],
     },
     {
-      title: 'Почему «время лечит» — худший совет при потере',
-      tag: 'Потеря',
-      desc: 'Горе не проходит — встраивается. Разница принципиальная. И что делать, когда через полгода-год «уже должно было отпустить», а не отпустило.',
-      date: 'Март 2026',
+      num: '03',
+      icon: Anchor,
+      iconColor: 'var(--color-cta)',
+      title: 'Навигация в Хаосе',
+      subtitle: 'Авторский метод',
+      forWhom: 'Для тех, кто готов не страдать, а действовать. Здесь — «кухня» метода.',
+      topics: [
+        'Почему «просто успокоиться» не работает — и что делать вместо этого',
+        'Метод 4 шагов: как я работаю с клиентом в остром кризисе (Якорение, Вербализация, Инвентаризация, Заземление)',
+        'План Б: как создать личную систему безопасности на случай жизненного шторма',
+        'Границы личности: как я учу клиентов говорить «нет» и не сгорать от вины',
+        'Почему юмор — серьёзный инструмент в кризисной терапии',
+        'Свобода и Структура: как совместить жажду перемен с необходимостью стабильности',
+      ],
     },
     {
-      title: 'Выгорание — это не усталость. Это поломка механизма восстановления',
-      tag: 'Выгорание',
-      desc: 'Почему «просто отдохните» не работает. В чём разница между усталостью и выгоранием на уровне физиологии. И как понять, что пора останавливаться — до того, как тело само остановит.',
-      date: 'Март 2026',
+      num: '04',
+      icon: Lightbulb,
+      iconColor: 'var(--color-accent-talents)',
+      title: 'Маяк в пути',
+      subtitle: 'Личное и вдохновляющее',
+      forWhom: 'Для постоянных читателей, которым важно чувствовать человека, а не функцию.',
+      topics: [
+        'Мой путь: от шторма к Маяку — личная история о том, как рождался специалист',
+        'Письмо себе в 20 лет: что я знаю о кризисах сейчас, чего не знал тогда',
+        'Ресурсы, которые спасают меня: книги, фильмы, места, люди',
+        'Почему помогать тем, у кого нет денег — часть моей миссии. Манифест о бесплатной помощи',
+        'Одиночество профессионала: как я сам справляюсь с чужим грузом',
+      ],
     },
     {
-      title: 'Экзистенциальный тупик: когда «нормальная жизнь» перестала насыщать',
-      tag: 'Экзистенциальный тупик',
-      desc: 'Вроде всё в порядке — работа, отношения, деньги. А жить не хочется. Не депрессия — а встреча с вопросом «зачем». И почему антидепрессантом его не заглушить.',
-      date: 'Март 2026',
-    },
-    {
-      title: 'Паническая атака прямо сейчас: инструкция по самопомощи',
-      tag: 'Острые состояния',
-      desc: 'Техника 5-4-3-2-1, дыхание 4-7-8, и что делать, когда эти техники не работают. Плюс — когда паническая атака это звонок психиатру, а не психологу.',
-      date: 'Февраль 2026',
-    },
-    {
-      title: 'Разница между горем и депрессией: когда нужен психиатр',
-      tag: 'Потеря',
-      desc: 'Горе — это здоровая реакция на утрату. Депрессия — это болезнь. Путать их опасно в обе стороны. Критерии, которые видны даже неспециалисту.',
-      date: 'Февраль 2026',
+      num: '05',
+      icon: Sparkles,
+      iconColor: 'var(--color-accent-life)',
+      title: 'Вкус жизни',
+      subtitle: 'Возвращение в тело и реальность',
+      forWhom: 'Для тех, кто устал от психологии и хочет простых, земных способов почувствовать себя живым.',
+      topics: [
+        'Заземление: 5 простых практик, чтобы вернуться в тело, когда сознание улетает в панику',
+        'Еда как терапия: почему важно есть вкусно, даже когда жить не хочется',
+        'Прогулки спасения: как ходьба пешком восстанавливает нейронные связи',
+        'Тактильный голод: что делать, если не хватает прикосновений',
+        'Маленькие радости большого кризиса: учимся замечать свет в темноте',
+        'Зачем заваривать чай по всем правилам, когда мир рушится',
+      ],
     },
   ];
 
@@ -58,32 +106,67 @@ export default function BlogPage() {
         <div className="container" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <h1 style={{ fontSize: '3rem', marginBottom: '16px' }}>Блог</h1>
           <p style={{ fontSize: '1.15rem', color: 'var(--color-text-light)', lineHeight: 1.6 }}>
-            Короткие тексты о кризисах, о методе, о том, как устроена психика в момент «всё пропало». Без воды, без эзотерики, без «возьмите себя в руки».
+            Пять рубрик. От «больно прямо сейчас» — до «как вернуться к вкусу жизни». Без воды, без эзотерики, без «возьмите себя в руки». Тексты пишутся постепенно — здесь карта, по которой движемся.
           </p>
         </div>
       </div>
 
       <section className="section">
         <div className="container" style={{ maxWidth: '1100px' }}>
-          <div className="grid grid-cols-3" style={{ gap: '24px' }}>
-            {articles.map((item, i) => (
-              <div key={i} className="card" style={{ display: 'flex', flexDirection: 'column', padding: '28px', cursor: 'default' }}>
-                <div style={{ fontSize: '12px', textTransform: 'uppercase', color: 'var(--color-cta)', fontWeight: 600, marginBottom: '12px', letterSpacing: '0.05em' }}>{item.tag}</div>
-                <h3 style={{ fontSize: '1.2rem', marginBottom: '16px', lineHeight: 1.4 }}>{item.title}</h3>
-                <p style={{ color: 'var(--color-text-light)', marginBottom: '24px', flexGrow: 1, fontSize: '0.95rem', lineHeight: 1.6 }}>{item.desc}</p>
-                <div style={{ color: '#aaa', fontSize: '14px', borderTop: '1px solid #eaeaea', paddingTop: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span>{item.date}</span>
-                  <span style={{ fontSize: '13px', color: '#bbb' }}>скоро</span>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
+            {rubrics.map((r) => {
+              const Icon = r.icon;
+              return (
+                <div key={r.num} className="card" style={{ padding: '40px', display: 'grid', gridTemplateColumns: '80px 1fr', gap: '32px', alignItems: 'start' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
+                    <div style={{ fontSize: '14px', color: '#bbb', fontWeight: 600, letterSpacing: '0.1em' }}>{r.num}</div>
+                    <div style={{ width: '64px', height: '64px', borderRadius: '16px', backgroundColor: 'var(--color-bg-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <Icon size={32} color={r.iconColor} />
+                    </div>
+                  </div>
+
+                  <div>
+                    <div style={{ fontSize: '12px', textTransform: 'uppercase', color: r.iconColor, fontWeight: 600, marginBottom: '8px', letterSpacing: '0.05em' }}>{r.subtitle}</div>
+                    <h2 style={{ fontSize: '1.8rem', marginBottom: '16px', lineHeight: 1.2 }}>{r.title}</h2>
+                    <p style={{ color: 'var(--color-text-light)', marginBottom: '24px', lineHeight: 1.6, fontStyle: 'italic' }}>{r.forWhom}</p>
+
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                      {r.topics.map((t, i) => (
+                        <li key={i} style={{ display: 'flex', gap: '12px', color: 'var(--color-text-main)', fontSize: '0.97rem', lineHeight: 1.55 }}>
+                          <span style={{ color: r.iconColor, fontWeight: 600, flexShrink: 0, minWidth: '22px' }}>{i + 1}.</span>
+                          <span>{t}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
-          <div style={{ marginTop: '60px', padding: '24px', backgroundColor: 'var(--color-bg-secondary)', borderRadius: '12px', textAlign: 'center' }}>
+          <div style={{ marginTop: '60px', padding: '32px', backgroundColor: 'var(--color-bg-secondary)', borderRadius: '16px' }}>
+            <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
+              <div style={{ width: '56px', height: '56px', borderRadius: '14px', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <Mail size={28} color="var(--color-cta)" />
+              </div>
+              <div>
+                <div style={{ fontSize: '12px', textTransform: 'uppercase', color: 'var(--color-cta)', fontWeight: 600, marginBottom: '8px', letterSpacing: '0.05em' }}>Бонус-форматы</div>
+                <h3 style={{ fontSize: '1.3rem', marginBottom: '12px' }}>Что появится сверх рубрик</h3>
+                <ul style={{ paddingLeft: '20px', color: 'var(--color-text-light)', lineHeight: 1.7, margin: 0 }}>
+                  <li><strong style={{ color: 'var(--color-text-main)' }}>«Вопрос недели»</strong> — раз в неделю разбираю одно письмо читателя (анонимно), формат мини-консультации.</li>
+                  <li><strong style={{ color: 'var(--color-text-main)' }}>Чек-листы и PDF</strong> — «План эвакуации при панике», «Словарь чувств за 5 минут». Скачать и сохранить в телефон.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ marginTop: '40px', padding: '24px', textAlign: 'center' }}>
             <p style={{ color: 'var(--color-text-light)', margin: 0, fontSize: '0.95rem', lineHeight: 1.6 }}>
-              Тексты пишутся постепенно. Пока здесь — темы и аннотации. Полные статьи появятся по одной, без гонки. Если хотите, чтобы какая-то тема вышла раньше — напишите в <a href="https://t.me/SouL_See_You" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-cta)' }}>Telegram</a>, подвину в очереди.
+              Тексты пишутся постепенно. Если хотите, чтобы какая-то тема вышла раньше — напишите в <a href="https://t.me/SouL_See_You" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-cta)' }}>Telegram</a>, подвину в очереди.
             </p>
           </div>
+
         </div>
       </section>
     </>
