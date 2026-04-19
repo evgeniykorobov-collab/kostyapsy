@@ -35,14 +35,67 @@ export default function AboutPage() {
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginTop: '10px' }}>
                 <div style={{ borderLeft: '3px solid var(--color-cta)', paddingLeft: '16px' }}>
-                  <div style={{ fontSize: '2rem', fontWeight: 700 }}>5+</div>
-                  <div style={{ color: 'var(--color-text-light)' }}>Лет практики</div>
+                  <div style={{ fontSize: '2rem', fontWeight: 700 }}>3</div>
+                  <div style={{ color: 'var(--color-text-light)' }}>Года практики</div>
                 </div>
                 <div style={{ borderLeft: '3px solid var(--color-cta)', paddingLeft: '16px' }}>
                   <div style={{ fontSize: '2rem', fontWeight: 700 }}>1000+</div>
                   <div style={{ color: 'var(--color-text-light)' }}>Часов консультаций</div>
                 </div>
               </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container" style={{ maxWidth: '1000px' }}>
+          <motion.div {...fadeIn}>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Образование</h2>
+            <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '40px', maxWidth: '700px' }}>
+              Квалификация кризисного психолога с расширенной специализацией по экстремальной психологии — 44 дисциплины программы: от диагностики острых состояний до арт-терапии и работы с ПТСР.
+            </p>
+
+            <div className="card" style={{ padding: '32px', marginBottom: '32px' }}>
+              <div style={{ fontSize: '0.8rem', color: 'var(--color-cta)', fontWeight: 600, marginBottom: '10px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                Диплом № 187468 · г. Москва
+              </div>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: '10px' }}>
+                «Кризисная психология. Экстремальная психология»
+              </h3>
+              <p style={{ margin: '0 0 10px', color: 'var(--color-text-main)' }}>
+                С присвоением квалификации <strong>«Кризисный психолог»</strong>
+              </p>
+              <p style={{ margin: 0, fontSize: '0.95rem', color: 'var(--color-text-light)' }}>
+                АНО ДПО «Национальная академия дополнительного профессионального образования» (АНО ДПО «НАДПО»)
+              </p>
+            </div>
+
+            <div style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-cta)', fontWeight: 600, marginBottom: '16px' }}>
+              Ключевые блоки программы
+            </div>
+
+            <div className="grid grid-cols-2" style={{ gap: '20px' }}>
+              {[
+                { title: 'Кризисные состояния', items: ['Диагностика кризисных состояний', 'Виды возрастных кризисов', 'Психологическое сопровождение кризисов', 'Экстренная психологическая помощь'] },
+                { title: 'Травма и ПТСР', items: ['Алгоритм работы с ПТСР', 'Психологическая диагностика ПТСР', 'Работа с пиковыми переживаниями', 'Посттравматическая депрессия'] },
+                { title: 'Утрата, насилие, развод', items: ['Сопровождение в ситуации утраты', 'Семейные кризисы: измена, развод', 'Помощь в ситуации насилия'] },
+                { title: 'Стресс и стабилизация', items: ['Методы стабилизации эмоционального состояния', 'Факторы психологического стресса', 'Техники доступа к внутренним и внешним ресурсам'] },
+                { title: 'Арт-терапия', items: ['Общая характеристика метода', 'Работа с кризисными состояниями', 'Работа с психологической травмой'] },
+                { title: 'Специальные темы', items: ['Детская психология в условиях кризиса', 'Стадии протекания горя', 'Дистанционное консультирование'] },
+              ].map(block => (
+                <div key={block.title} className="card" style={{ padding: '24px' }}>
+                  <h4 style={{ fontSize: '1.1rem', marginBottom: '12px' }}>{block.title}</h4>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    {block.items.map(item => (
+                      <li key={item} style={{ color: 'var(--color-text-light)', fontSize: '0.95rem', lineHeight: 1.5, paddingLeft: '16px', position: 'relative' }}>
+                        <span style={{ position: 'absolute', left: 0, color: 'var(--color-cta)' }}>·</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>
