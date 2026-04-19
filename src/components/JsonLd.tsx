@@ -9,7 +9,7 @@ export default function JsonLd() {
     email: 'hello@klimov-psy.ru',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Москва',
+      addressLocality: 'Ростов-на-Дону',
       addressCountry: 'RU',
     },
     openingHours: ['Mo-Fr 10:00-20:00', 'Sa 11:00-16:00'],

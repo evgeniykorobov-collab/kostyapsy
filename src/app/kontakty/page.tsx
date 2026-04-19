@@ -51,7 +51,7 @@ export default function ContactsPage() {
               <div style={{ padding: '30px' }}>
                 <h3 style={{ fontSize: '1.5rem', marginBottom: '20px' }}>Адрес кабинета</h3>
                 <p style={{ color: 'var(--color-text-light)', fontSize: '1.1rem', marginBottom: '24px' }}>
-                  г. Москва, ул. Примерная, д. 10<br/>
+                  г. Ростов-на-Дону<br/>
                   Бизнес-центр «Психология», 3 этаж, офис 305
                 </p>
               </div>

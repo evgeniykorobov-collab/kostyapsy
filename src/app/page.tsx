@@ -213,7 +213,7 @@ export default function Home() {
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 <li style={{ display: 'flex', borderBottom: '1px solid #eaeaea', paddingBottom: '16px' }}>
                   <strong style={{ width: '40%', color: 'var(--color-text-main)' }}>Очные консультации:</strong>
-                  <span style={{ width: '60%', color: 'var(--color-text-light)' }}>Москва (возможен выезд по запросу)</span>
+                  <span style={{ width: '60%', color: 'var(--color-text-light)' }}>Ростов-на-Дону (возможен выезд по запросу)</span>
                 </li>
                 <li style={{ display: 'flex', borderBottom: '1px solid #eaeaea', paddingBottom: '16px' }}>
                   <strong style={{ width: '40%', color: 'var(--color-text-main)' }}>Онлайн:</strong>
