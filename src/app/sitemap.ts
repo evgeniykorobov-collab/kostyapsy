@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { articles } from '@/data/articles';
 
 const BASE_URL = 'https://kostyapsy.ru';
 
@@ -18,10 +19,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/privacy-policy', priority: 0.3 },
   ];
 
-  return pages.map(({ url, priority }) => ({
+  const staticEntries = pages.map(({ url, priority }) => ({
     url: `${BASE_URL}${url}`,
     lastModified: new Date(),
-    changeFrequency: url === '/blog' ? 'weekly' : 'monthly',
+    changeFrequency: (url === '/blog' ? 'weekly' : 'monthly') as 'weekly' | 'monthly',
     priority,
   }));
+
+  const articleEntries = articles.map((a) => ({
+    url: `${BASE_URL}/blog/${a.slug}`,
+    lastModified: new Date(a.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }));
+
+  return [...staticEntries, ...articleEntries];
 }

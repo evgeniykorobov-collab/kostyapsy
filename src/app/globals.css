@@ -227,6 +227,24 @@ img {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Article prose styles */
+.article-body { font-family: var(--font-inter); color: var(--color-text-main); }
+.article-body p { font-size: 1.075rem; line-height: 1.75; margin-bottom: 1.2em; color: #2a2a2a; }
+.article-body h2 { font-size: 1.55rem; line-height: 1.3; margin-top: 2.2em; margin-bottom: 0.8em; }
+.article-body h3 { font-size: 1.2rem; line-height: 1.35; margin-top: 1.8em; margin-bottom: 0.6em; }
+.article-body strong { font-weight: 600; color: var(--color-text-main); }
+.article-body ul, .article-body ol { margin: 0 0 1.4em 0; padding-left: 1.4em; line-height: 1.7; }
+.article-body li { margin-bottom: 0.55em; font-size: 1.05rem; color: #2a2a2a; }
+.article-body li::marker { color: var(--color-text-light); }
+.article-body blockquote { border-left: 3px solid var(--color-cta); padding: 6px 0 6px 20px; margin: 1.5em 0; color: var(--color-text-light); font-style: italic; }
+.article-body hr { border: none; border-top: 1px solid #e5e5e5; margin: 2.5em 0; }
+.article-body .lead { font-size: 1.2rem; line-height: 1.65; color: #2a2a2a; margin-bottom: 1.5em; }
+
+@media (max-width: 767px) {
+  .article-body p, .article-body li { font-size: 1rem !important; }
+  .article-body h2 { font-size: 1.35rem !important; }
+}
+
 /* Mobile-first responsive overrides — таргет inline-styles на узких экранах */
 @media (max-width: 767px) {
   h1 { font-size: clamp(1.75rem, 7vw, 2.25rem) !important; line-height: 1.15 !important; }

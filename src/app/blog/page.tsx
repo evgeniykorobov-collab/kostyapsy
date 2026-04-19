@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
-import { LifeBuoy, Compass, Anchor, Lightbulb, Sparkles, Mail } from 'lucide-react';
+import Link from 'next/link';
+import { LifeBuoy, Compass, Anchor, Lightbulb, Sparkles, Mail, ArrowRight, Clock } from 'lucide-react';
+import { articles } from '@/data/articles';
 
 export const metadata: Metadata = {
   title: 'Блог | Константин Альбертович, кризисный психолог',
@@ -106,13 +108,63 @@ export default function BlogPage() {
         <div className="container" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <h1 style={{ fontSize: '3rem', marginBottom: '16px' }}>Блог</h1>
           <p style={{ fontSize: '1.15rem', color: 'var(--color-text-light)', lineHeight: 1.6 }}>
-            Пять рубрик. От «больно прямо сейчас» — до «как вернуться к вкусу жизни». Без воды, без эзотерики, без «возьмите себя в руки». Тексты пишутся постепенно — здесь карта, по которой движемся.
+            Пять рубрик. От «больно прямо сейчас» — до «как вернуться к вкусу жизни». Без воды, без эзотерики, без «возьмите себя в руки».
           </p>
         </div>
       </div>
 
-      <section className="section">
+      {/* Published articles */}
+      <section className="section" style={{ paddingBottom: '40px' }}>
         <div className="container" style={{ maxWidth: '1100px' }}>
+          <h2 style={{ fontSize: '1.6rem', marginBottom: '32px', textAlign: 'center' }}>Опубликованные статьи</h2>
+
+          <div className="grid grid-cols-2" style={{ gap: '24px' }}>
+            {articles.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/blog/${a.slug}`}
+                className="card"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  padding: '28px',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  height: '100%',
+                  cursor: 'pointer',
+                }}
+              >
+                <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.08em', color: a.rubricColor, fontWeight: 600, marginBottom: '12px' }}>
+                  {a.rubricLabel}
+                </div>
+                <h3 style={{ fontSize: '1.2rem', lineHeight: 1.3, marginBottom: '12px', color: 'var(--color-text-main)' }}>
+                  {a.title}
+                </h3>
+                <p style={{ color: 'var(--color-text-light)', fontSize: '0.95rem', lineHeight: 1.55, marginBottom: '20px', flex: 1 }}>
+                  {a.excerpt}
+                </p>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid #eee', paddingTop: '14px' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--color-text-light)', fontSize: '13px' }}>
+                    <Clock size={13} /> {a.readMinutes} мин
+                  </span>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: 'var(--color-cta)', fontSize: '14px', fontWeight: 600 }}>
+                    Читать <ArrowRight size={14} />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Rubric map */}
+      <section className="section" style={{ paddingTop: '40px' }}>
+        <div className="container" style={{ maxWidth: '1100px' }}>
+
+          <h2 style={{ fontSize: '1.6rem', marginBottom: '12px', textAlign: 'center' }}>Карта рубрик</h2>
+          <p style={{ textAlign: 'center', color: 'var(--color-text-light)', marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px' }}>
+            Тексты пишутся постепенно. Здесь — план движения.
+          </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
             {rubrics.map((r) => {
@@ -163,7 +215,7 @@ export default function BlogPage() {
 
           <div style={{ marginTop: '40px', padding: '24px', textAlign: 'center' }}>
             <p style={{ color: 'var(--color-text-light)', margin: 0, fontSize: '0.95rem', lineHeight: 1.6 }}>
-              Тексты пишутся постепенно. Если хотите, чтобы какая-то тема вышла раньше — напишите в <a href="https://t.me/SouL_See_You" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-cta)' }}>Telegram</a>, подвину в очереди.
+              Если хотите, чтобы какая-то тема вышла раньше — напишите в <a href="https://t.me/SouL_See_You" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-cta)' }}>Telegram</a>, подвину в очереди.
             </p>
           </div>
 
