@@ -55,3 +55,6 @@ site-structure.md
 /photo_*.jpg
 /photo_*.jpeg
 /photo_*.png
+
+# claude code internal state
+/.claude/
