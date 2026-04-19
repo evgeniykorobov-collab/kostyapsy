@@ -4,6 +4,7 @@ import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FloatingContact from '@/components/FloatingContact';
+import CookieBanner from '@/components/CookieBanner';
 import JsonLd from '@/components/JsonLd';
 
 const lora = Lora({ subsets: ['cyrillic', 'latin'], variable: '--font-lora' });
@@ -55,6 +56,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <FloatingContact />
+        <CookieBanner />
       </body>
     </html>
   );
