@@ -22,7 +22,7 @@ export default function AboutPage() {
           <motion.div {...fadeIn} className="grid grid-cols-2" style={{ gap: '60px', alignItems: 'center' }}>
             <div>
               <div style={{ width: '100%', aspectRatio: '3/4', backgroundColor: '#eaeaea', borderRadius: '24px', overflow: 'hidden' }} className="glass">
-                <img src="/therapy_room.png" alt="Константин Альбертович" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/kostya-portrait-v3-2026-04-19.png" alt="Константин Альбертович — кризисный психолог" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             </div>
 
@@ -92,6 +92,22 @@ export default function AboutPage() {
 
       <section className="section">
         <div className="container" style={{ maxWidth: '1000px' }}>
+          <motion.div {...fadeIn} className="grid grid-cols-2" style={{ gap: '60px', alignItems: 'center', marginBottom: '80px' }}>
+            <div style={{ width: '100%', aspectRatio: '4/5', borderRadius: '24px', overflow: 'hidden' }} className="glass">
+              <img src="/kostya-armchair-2026-04-19.png" alt="Константин в кресле консультанта" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <div style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-cta)', fontWeight: 600 }}>Как я работаю</div>
+              <h3 style={{ fontSize: '2rem', lineHeight: 1.2 }}>Присутствие важнее техники</h3>
+              <p style={{ fontSize: '1.05rem', lineHeight: 1.7, color: 'var(--color-text-light)' }}>
+                В кризисе первое, что нужно человеку — не совет, а поле, в котором можно не держать лицо. Я не спасаю, не оцениваю и не раздаю готовые рецепты. Я — тот, кто выдерживает вашу бурю рядом, пока вы вспоминаете, что у вас есть ноги, на которых можно стоять.
+              </p>
+              <p style={{ fontSize: '1.05rem', lineHeight: 1.7, color: 'var(--color-text-light)' }}>
+                Техники подключаются потом — и всегда под вас, не наоборот.
+              </p>
+            </div>
+          </motion.div>
+
           <motion.div {...fadeIn}>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Авторский метод: «Навигация в Хаосе»</h2>
             <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '50px', maxWidth: '700px' }}>
@@ -150,6 +166,14 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container" style={{ maxWidth: '1100px' }}>
+          <motion.div {...fadeIn} style={{ width: '100%', aspectRatio: '3/2', borderRadius: '24px', overflow: 'hidden' }} className="glass">
+            <img src="/kostya-working-v3-2026-04-19.png" alt="Константин за работой — пишет заметки" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </motion.div>
         </div>
       </section>

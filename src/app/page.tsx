@@ -172,6 +172,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Фото за работой */}
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="container" style={{ maxWidth: '1100px' }}>
+          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ width: '100%', aspectRatio: '3/2', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.08)' }}>
+            <img src="/kostya-working-v4-2026-04-19.png" alt="Константин Альбертович — за работой" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </motion.div>
+        </div>
+      </section>
+
       {/* Как проходит первая встреча & Формат */}
       <section className="section section-bg-secondary">
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px' }}>

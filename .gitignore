@@ -50,3 +50,8 @@ audio_*.txt
 CLAUDE.md
 AGENTS.md
 site-structure.md
+
+# raw source photos — never push (личные фото Константина)
+/photo_*.jpg
+/photo_*.jpeg
+/photo_*.png
