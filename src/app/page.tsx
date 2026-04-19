@@ -71,8 +71,8 @@ export default function Home() {
             {[
               {
                 href: '/uslugi/razvod',
-                img: 'https://picsum.photos/id/10/800/400',
-                alt: 'Туман над лесом',
+                img: '/cards/razvod.png',
+                alt: 'Пустые стулья за кухонным столом',
                 icon: HeartCrack,
                 iconColor: 'var(--color-accent-women)',
                 borderColor: 'rgba(184, 169, 201, 0.3)',
@@ -81,8 +81,8 @@ export default function Home() {
               },
               {
                 href: '/uslugi/poterya',
-                img: 'https://picsum.photos/id/29/800/400',
-                alt: 'Приглушённый свет',
+                img: '/cards/poterya.png',
+                alt: 'Свеча на подоконнике, дождь за окном',
                 icon: Waves,
                 iconColor: 'var(--color-accent-life)',
                 borderColor: 'rgba(255, 218, 185, 0.5)',
@@ -91,8 +91,8 @@ export default function Home() {
               },
               {
                 href: '/uslugi/vygoranie',
-                img: 'https://picsum.photos/id/13/800/400',
-                alt: 'Выжженное поле',
+                img: '/cards/vygoranie.png',
+                alt: 'Остывший кофе, закрытый ноутбук, жалюзи',
                 icon: Flame,
                 iconColor: 'var(--color-accent-fears)',
                 borderColor: 'rgba(143, 188, 143, 0.3)',
@@ -101,8 +101,8 @@ export default function Home() {
               },
               {
                 href: '/uslugi/ekzistencialnyj-tupik',
-                img: 'https://picsum.photos/id/28/800/400',
-                alt: 'Тихий рассвет',
+                img: '/cards/ekzistencialnyj.png',
+                alt: 'Одинокая фигура в утреннем тумане лесной тропы',
                 icon: Compass,
                 iconColor: 'var(--color-accent-talents)',
                 borderColor: 'rgba(218, 165, 32, 0.3)',
@@ -111,8 +111,8 @@ export default function Home() {
               },
               {
                 href: '/uslugi/ostrye-sostoyaniya',
-                img: 'https://picsum.photos/id/11/800/400',
-                alt: 'Абстрактные формы',
+                img: '/cards/ostrye.png',
+                alt: 'Ладони обнимают тёплую кружку с паром',
                 icon: AlertTriangle,
                 iconColor: 'var(--color-accent-ras)',
                 borderColor: 'rgba(127, 179, 216, 0.3)',
@@ -241,12 +241,31 @@ export default function Home() {
             <Link href="/blog" style={{ color: 'var(--color-cta)', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '8px' }}>Все статьи <ArrowRight size={16} /></Link>
           </div>
           <div className="grid grid-cols-3">
-            {[1, 2, 3].map(item => (
-              <div key={item} className="card" style={{ display: 'flex', flexDirection: 'column', padding: '24px' }}>
-                <div style={{ fontSize: '12px', textTransform: 'uppercase', color: 'var(--color-cta)', fontWeight: 600, marginBottom: '12px', letterSpacing: '0.05em' }}>Статья {item}</div>
-                <h3 style={{ fontSize: '1.25rem', marginBottom: '16px', lineHeight: 1.4 }}>Пример названия статьи: Как справиться с тревогой перед выступлениями</h3>
-                <p style={{ color: 'var(--color-text-light)', marginBottom: '24px', flexGrow: 1, fontSize: '0.95rem' }}>Краткое превью статьи, которое раскрывает суть материала и завлекает пользователя прочитать об этом подробнее...</p>
-                <div style={{ color: '#aaa', fontSize: '14px', borderTop: '1px solid #eaeaea', paddingTop: '16px' }}>15 Марта, 2026</div>
+            {[
+              {
+                tag: 'Метод',
+                title: '«Навигация в Хаосе»: почему работает и как устроена',
+                desc: 'Четыре этапа — Якорение, Вербализация, Инвентаризация, Заземление. Почему в кризисе порядок шагов важнее любой техники.',
+                date: 'Апрель 2026',
+              },
+              {
+                tag: 'Развод',
+                title: 'Первые 72 часа после развода: карта действий',
+                desc: 'Что делать, когда разговор состоялся и дом рухнул. Не про чувства — про конкретику: документы, деньги, дети, сон.',
+                date: 'Апрель 2026',
+              },
+              {
+                tag: 'Потеря',
+                title: 'Почему «время лечит» — худший совет при потере',
+                desc: 'Горе не проходит — встраивается. Разница принципиальная. И что делать, когда через полгода «уже должно было отпустить», а не отпустило.',
+                date: 'Март 2026',
+              },
+            ].map((item, i) => (
+              <div key={i} className="card" style={{ display: 'flex', flexDirection: 'column', padding: '28px' }}>
+                <div style={{ fontSize: '12px', textTransform: 'uppercase', color: 'var(--color-cta)', fontWeight: 600, marginBottom: '12px', letterSpacing: '0.05em' }}>{item.tag}</div>
+                <h3 style={{ fontSize: '1.2rem', marginBottom: '16px', lineHeight: 1.4 }}>{item.title}</h3>
+                <p style={{ color: 'var(--color-text-light)', marginBottom: '24px', flexGrow: 1, fontSize: '0.95rem', lineHeight: 1.6 }}>{item.desc}</p>
+                <div style={{ color: '#aaa', fontSize: '14px', borderTop: '1px solid #eaeaea', paddingTop: '16px' }}>{item.date}</div>
               </div>
             ))}
           </div>

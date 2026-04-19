@@ -1,8 +1,10 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
+import { Send, MapPin, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Контакты | Клинический психолог',
-  description: 'Контакты для записи на консультацию. Телефон, мессенджеры, адрес кабинета и часы работы.',
+  title: 'Контакты | Константин Альбертович, кризисный психолог',
+  description: 'Связаться с кризисным психологом Константином Альбертовичем. Telegram, запись на консультацию, Ростов-на-Дону и онлайн.',
 };
 
 export default function ContactsPage() {
@@ -10,53 +12,66 @@ export default function ContactsPage() {
     <>
       <div className="section section-bg-secondary" style={{ padding: '60px 0 40px' }}>
         <div className="container" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '20px' }}>Контакты</h1>
+          <h1 style={{ fontSize: '3rem', marginBottom: '16px' }}>Контакты</h1>
+          <p style={{ fontSize: '1.15rem', color: 'var(--color-text-light)', lineHeight: 1.6 }}>
+            Самый быстрый способ — написать в Telegram или оставить заявку. Отвечаю в течение дня.
+          </p>
         </div>
       </div>
 
       <section className="section">
-        <div className="container" style={{ maxWidth: '1000px' }}>
-          <div className="grid grid-cols-2" style={{ gap: '60px', alignItems: 'start' }}>
-            
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
-              <div className="card">
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '20px' }}>Связаться со мной</h3>
-                <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '16px', fontSize: '1.1rem' }}>
-                  <li><strong>Телефон:</strong> +7 (999) 123-45-67</li>
-                  <li><strong>Telegram:</strong> @klimov_psy</li>
-                  <li><strong>WhatsApp:</strong> +7 (999) 123-45-67</li>
-                  <li><strong>Email:</strong> hello@klimov-psy.ru</li>
-                </ul>
-              </div>
+        <div className="container" style={{ maxWidth: '900px' }}>
+          <div className="grid grid-cols-2" style={{ gap: '24px' }}>
 
-              <div className="card">
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '20px' }}>Часы работы</h3>
-                <p style={{ color: 'var(--color-text-light)', fontSize: '1.1rem' }}>
-                  Пн-Пт: 10:00 — 20:00<br/>
-                  Сб: 11:00 — 16:00<br/>
-                  Вс: Выходной
-                </p>
+            <div className="card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ width: '56px', height: '56px', borderRadius: '16px', backgroundColor: 'var(--color-bg-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Send size={28} color="#229ED9" />
               </div>
-
-              <div className="card">
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '20px' }}>Социальные сети</h3>
-                <p style={{ color: 'var(--color-text-light)', fontSize: '1.1rem' }}>
-                  <strong>Telegram-канал:</strong> <a href="#" style={{ color: 'var(--color-cta)' }}>t.me/klimov_notes</a><br/>
-                  <strong>VK:</strong> <a href="#" style={{ color: 'var(--color-cta)' }}>vk.com/klimov_psy</a>
-                </p>
-              </div>
+              <h3 style={{ fontSize: '1.4rem', margin: 0 }}>Telegram</h3>
+              <p style={{ color: 'var(--color-text-light)', margin: 0, lineHeight: 1.6 }}>
+                Напишите в мессенджер — так быстрее всего согласовать время и формат.
+              </p>
+              <a
+                href="https://t.me/SouL_See_You"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+                style={{ alignSelf: 'flex-start', marginTop: '8px' }}
+              >
+                Написать в Telegram
+              </a>
             </div>
 
-            <div className="card" style={{ padding: '0', overflow: 'hidden', height: '100%' }}>
-              <div style={{ padding: '30px' }}>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '20px' }}>Адрес кабинета</h3>
-                <p style={{ color: 'var(--color-text-light)', fontSize: '1.1rem', marginBottom: '24px' }}>
-                  г. Ростов-на-Дону<br/>
-                  Бизнес-центр «Психология», 3 этаж, офис 305
-                </p>
+            <div className="card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ width: '56px', height: '56px', borderRadius: '16px', backgroundColor: 'var(--color-bg-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Clock size={28} color="var(--color-cta)" />
               </div>
-              <div style={{ width: '100%', height: '400px', backgroundColor: '#eaeaea', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ color: '#999' }}>Интерактивная карта (Яндекс/Google)</span>
+              <h3 style={{ fontSize: '1.4rem', margin: 0 }}>Запись на консультацию</h3>
+              <p style={{ color: 'var(--color-text-light)', margin: 0, lineHeight: 1.6 }}>
+                Короткая форма — опишите в двух словах ситуацию, свяжусь с вами в ответ.
+              </p>
+              <Link
+                href="/zapis"
+                className="btn btn-secondary"
+                style={{ alignSelf: 'flex-start', marginTop: '8px' }}
+              >
+                Оставить заявку
+              </Link>
+            </div>
+
+            <div className="card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '16px', gridColumn: '1 / -1' }}>
+              <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
+                <div style={{ width: '56px', height: '56px', borderRadius: '16px', backgroundColor: 'var(--color-bg-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <MapPin size={28} color="var(--color-accent-fears)" />
+                </div>
+                <div>
+                  <h3 style={{ fontSize: '1.4rem', margin: '0 0 8px' }}>Где работаю</h3>
+                  <p style={{ color: 'var(--color-text-light)', margin: 0, lineHeight: 1.7 }}>
+                    <strong style={{ color: 'var(--color-text-main)' }}>Очно:</strong> Ростов-на-Дону, адрес уточняется при записи. Возможен выезд по запросу.<br />
+                    <strong style={{ color: 'var(--color-text-main)' }}>Онлайн:</strong> Zoom / Telegram-видео / по согласованию — для клиентов из других городов и стран.<br />
+                    <strong style={{ color: 'var(--color-text-main)' }}>Формат:</strong> 50–60 минут, обычно 1 раз в неделю.
+                  </p>
+                </div>
               </div>
             </div>
 

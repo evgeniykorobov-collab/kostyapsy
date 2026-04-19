@@ -2,18 +2,14 @@ export default function JsonLd() {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'Страхи и таланты',
+    name: 'Константин Альбертович — кризисный психолог',
     description: 'Кризисный психолог. Помощь в острых состояниях — развод, потеря, выгорание, экзистенциальный тупик. Авторский метод «Навигация в Хаосе».',
-    url: 'https://klimov-psy.ru',
-    telephone: '+79991234567',
-    email: 'hello@klimov-psy.ru',
+    url: 'https://kostyapsy.ru',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Ростов-на-Дону',
       addressCountry: 'RU',
     },
-    openingHours: ['Mo-Fr 10:00-20:00', 'Sa 11:00-16:00'],
-    priceRange: 'от 5000 руб.',
     areaServed: {
       '@type': 'Country',
       name: 'Россия',
@@ -21,16 +17,20 @@ export default function JsonLd() {
     serviceType: [
       'Кризисная психологическая помощь',
       'Авторский метод «Навигация в Хаосе»',
-      'Работа с детьми с РАС',
-      'Терапия тревожных расстройств',
-      'Терапия депрессии',
-      'Помощь при выгорании',
+      'Работа с разводом и расставанием',
+      'Работа с потерей и горем',
+      'Работа с выгоранием',
+      'Экзистенциальный тупик',
+      'Острые состояния и панические атаки',
     ],
     founder: {
       '@type': 'Person',
       name: 'Константин Альбертович',
       jobTitle: 'Кризисный психолог',
     },
+    sameAs: [
+      'https://t.me/SouL_See_You',
+    ],
   };
 
   return (
