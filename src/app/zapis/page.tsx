@@ -1,9 +1,11 @@
 'use client';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
-type FormStatus = 'idle' | 'sending' | 'success' | 'error';
+type FormStatus = 'idle' | 'sending' | 'error';
 
 export default function RecordPage() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
     contact: '',
@@ -31,9 +33,7 @@ export default function RecordPage() {
         body: JSON.stringify(formData),
       });
       if (res.ok) {
-        setStatus('success');
-        setFormData({ name: '', contact: '', email: '', direction: '', format: '', comment: '' });
-        setAgreed(false);
+        router.push('/spasibo');
       } else {
         setStatus('error');
       }
@@ -43,32 +43,6 @@ export default function RecordPage() {
   };
 
   const inputStyle = { width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #ddd', fontSize: '16px' };
-
-  if (status === 'success') {
-    return (
-      <>
-        <div className="section section-bg-secondary" style={{ padding: '60px 0 40px' }}>
-          <div className="container" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h1 style={{ fontSize: '3rem', marginBottom: '20px' }}>Запись на консультацию</h1>
-          </div>
-        </div>
-        <section className="section">
-          <div className="container" style={{ maxWidth: '600px', textAlign: 'center' }}>
-            <div className="card" style={{ padding: '60px 40px' }}>
-              <div style={{ fontSize: '4rem', marginBottom: '20px' }}>✓</div>
-              <h2 style={{ fontSize: '1.8rem', marginBottom: '16px' }}>Заявка отправлена</h2>
-              <p style={{ color: 'var(--color-text-light)', fontSize: '1.1rem', marginBottom: '30px' }}>
-                Спасибо! Я свяжусь с вами в течение 24 часов для подтверждения записи.
-              </p>
-              <button className="btn" onClick={() => setStatus('idle')} style={{ padding: '14px 32px' }}>
-                Отправить ещё одну заявку
-              </button>
-            </div>
-          </div>
-        </section>
-      </>
-    );
-  }
 
   return (
     <>
