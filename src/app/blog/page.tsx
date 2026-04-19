@@ -118,7 +118,7 @@ export default function BlogPage() {
             {rubrics.map((r) => {
               const Icon = r.icon;
               return (
-                <div key={r.num} className="card" style={{ padding: '40px', display: 'grid', gridTemplateColumns: '80px 1fr', gap: '32px', alignItems: 'start' }}>
+                <div key={r.num} className="card rubric-card" style={{ padding: '40px', display: 'grid', gridTemplateColumns: '80px 1fr', gap: '32px', alignItems: 'start' }}>
                   <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
                     <div style={{ fontSize: '14px', color: '#bbb', fontWeight: 600, letterSpacing: '0.1em' }}>{r.num}</div>
                     <div style={{ width: '64px', height: '64px', borderRadius: '16px', backgroundColor: 'var(--color-bg-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

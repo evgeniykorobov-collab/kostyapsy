@@ -23,7 +23,7 @@ export default function Navigation() {
   return (
     <nav style={{ position: 'sticky', top: 0, zIndex: 50, backgroundColor: 'rgba(255, 255, 255, 0.95)', backdropFilter: 'blur(10px)', borderBottom: '1px solid #eaeaea' }}>
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '70px' }}>
-        <Link href="/" onClick={closeMenus} style={{ fontFamily: 'var(--font-lora)', fontSize: '22px', fontWeight: 600, color: 'var(--color-text-main)', lineHeight: 1.1 }}>
+        <Link href="/" onClick={closeMenus} className="brand-link" style={{ fontFamily: 'var(--font-lora)', fontSize: '22px', fontWeight: 600, color: 'var(--color-text-main)', lineHeight: 1.1 }}>
           Константин Альбертович
         </Link>
 
