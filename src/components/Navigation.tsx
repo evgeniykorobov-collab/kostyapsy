@@ -28,7 +28,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="desktop-menu" style={{ display: 'none' }}>
+        <div className="desktop-menu">
           <Link href="/about" className="nav-link">О специалисте</Link>
           <div style={{ position: 'relative' }} className="nav-dropdown-container">
             <button className="nav-link" onClick={toggleServices} style={{ background: 'none', border: 'none', display: 'flex', alignItems: 'center', cursor: 'pointer', fontFamily: 'var(--font-inter)', fontSize: '16px', color: 'var(--color-text-main)' }}>
@@ -58,7 +58,7 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="mobile-toggle" onClick={toggleMenu} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'block', padding: '8px' }}>
+        <button className="mobile-toggle" onClick={toggleMenu} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '8px' }}>
           {isOpen ? <X size={28} color="var(--color-text-main)" /> : <Menu size={28} color="var(--color-text-main)" />}
         </button>
       </div>
