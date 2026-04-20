@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     description: 'Помогаю, когда «всё пропало». Авторский метод «Навигация в Хаосе».',
     images: ['/og-image.png'],
   },
+  verification: {
+    yandex: '5e8dcc7fc9c2ce13',
+  },
 };
 
 export default function RootLayout({
