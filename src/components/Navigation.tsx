@@ -52,6 +52,7 @@ export default function Navigation() {
             </AnimatePresence>
           </div>
           <Link href="/metody" className="nav-link">Метод</Link>
+          <Link href="/astro" className="nav-link">Карта</Link>
           <Link href="/blog" className="nav-link">Блог</Link>
           <Link href="/kontakty" className="nav-link">Контакты</Link>
           <Link href="/zapis" className="btn" style={{ marginLeft: '16px', padding: '10px 20px' }}>Записаться</Link>
@@ -87,6 +88,7 @@ export default function Navigation() {
               </div>
 
               <Link href="/metody" onClick={closeMenus} className="mobile-nav-link">Метод</Link>
+              <Link href="/astro" onClick={closeMenus} className="mobile-nav-link">Ведическая карта</Link>
               <Link href="/blog" onClick={closeMenus} className="mobile-nav-link">Блог</Link>
               <Link href="/kontakty" onClick={closeMenus} className="mobile-nav-link">Контакты</Link>
 
