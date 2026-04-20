@@ -60,6 +60,9 @@ compositions = [
             "premium editorial quality. No text, no watermarks."
         ),
     ),
+]
+
+_unused_compositions = [
     (
         "kostya-armchair-2026-04-19.png",
         (
