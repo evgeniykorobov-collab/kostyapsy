@@ -11,6 +11,26 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: 'kak-ya-stal-mayakom',
+    title: 'Как я стал Маяком: история о брате, свете и умении жить дальше',
+    excerpt: 'Мой брат погиб на СВО. В такие моменты психика либо рассыпается, либо мобилизуется. Моя выбрала второе. Так родился этот путь.',
+    rubric: 'mayak',
+    rubricLabel: 'Маяк в пути',
+    rubricColor: 'var(--color-accent-talents)',
+    date: '2026-04-20',
+    readMinutes: 6,
+  },
+  {
+    slug: 'pole-moey-lyubvi',
+    title: 'Поле моей любви: что вы почувствуете, обратившись ко мне',
+    excerpt: 'Не метод, а пространство. Безусловное принятие, слова, структура и возвращение к себе — то, что происходит между нами до и после любой техники.',
+    rubric: 'mayak',
+    rubricLabel: 'Маяк в пути',
+    rubricColor: 'var(--color-accent-talents)',
+    date: '2026-04-20',
+    readMinutes: 6,
+  },
+  {
     slug: '24-chasa-posle-rasstavaniya',
     title: 'Первые 24 часа после расставания: пошаговая инструкция выживания',
     excerpt: 'Что не делать, что делать, как пережить ночь и почему решения первых трёх суток обычно плохие.',
