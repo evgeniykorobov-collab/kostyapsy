@@ -49,6 +49,28 @@ export default function AboutPage() {
       </section>
 
       <section className="section">
+        <div className="container" style={{ maxWidth: '760px', textAlign: 'center' }}>
+          <motion.div {...fadeIn}>
+            <div style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-cta)', fontWeight: 600, marginBottom: '16px' }}>
+              Почему я пришёл в эту профессию
+            </div>
+            <h2 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', lineHeight: 1.25, marginBottom: '24px' }}>
+              Мой брат погиб на СВО. Это изменило всё.
+            </h2>
+            <p style={{ fontSize: '1.1rem', lineHeight: 1.8, color: 'var(--color-text-light)', marginBottom: '20px' }}>
+              Когда это случилось, рядом была наша Мама, вдова брата и его двое детей. Я понял: если я лягу — лягут все. Психика включила режим «Маяк» — не от силы, а потому что иначе было нельзя.
+            </p>
+            <p style={{ fontSize: '1.1rem', lineHeight: 1.8, color: 'var(--color-text-light)', marginBottom: '32px' }}>
+              Я не «выучился» в психолога. Я понял, что умею выдерживать тьму — и что этим умением можно делиться. Так появился этот путь и этот сайт.
+            </p>
+            <Link href="/blog/kak-ya-stal-mayakom" className="btn btn-secondary" style={{ padding: '12px 28px' }}>
+              Прочитать письмо целиком
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container" style={{ maxWidth: '1000px' }}>
           <motion.div {...fadeIn}>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>Образование</h2>

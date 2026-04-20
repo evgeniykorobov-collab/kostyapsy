@@ -12,13 +12,13 @@ export type Article = {
 export const articles: Article[] = [
   {
     slug: 'kak-ya-stal-mayakom',
-    title: 'Как я стал Маяком: история о брате, свете и умении жить дальше',
-    excerpt: 'Мой брат погиб на СВО. В такие моменты психика либо рассыпается, либо мобилизуется. Моя выбрала второе. Так родился этот путь.',
+    title: 'Письмо моему брату. И всем, кто потерял родных',
+    excerpt: 'Мой брат погиб на СВО. Я пишу это, чтобы вы, кто потерял близких, знали: я понимаю. Не из книг — из жизни.',
     rubric: 'mayak',
     rubricLabel: 'Маяк в пути',
     rubricColor: 'var(--color-accent-talents)',
     date: '2026-04-20',
-    readMinutes: 6,
+    readMinutes: 4,
   },
   {
     slug: 'pole-moey-lyubvi',
