@@ -14,11 +14,14 @@ Targets:  public/kostya-portrait-v3-2026-04-19.png  (/about hero)
           public/kostya-working-v4-2026-04-19.png   (main page)
 """
 import os
+import sys
 import base64
 import time
 import requests
 
-API_KEY = "<REMOVED_LEAKED_KEY_ROTATED>"
+API_KEY = os.environ.get("GEMINI_API_KEY")
+if not API_KEY:
+    sys.exit("ERROR: GEMINI_API_KEY env var not set. Run: GEMINI_API_KEY=<key> python scripts/generate_kostya_photos.py")
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent?key={API_KEY}"
 
 ROOT = "z:/VIBE/Kostya"
