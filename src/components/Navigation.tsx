@@ -53,6 +53,7 @@ export default function Navigation() {
           </div>
           <Link href="/metody" className="nav-link">Метод</Link>
           <Link href="/astro" className="nav-link">Карта</Link>
+          <Link href="/chakry" className="nav-link">Чакры</Link>
           <Link href="/blog" className="nav-link">Блог</Link>
           <Link href="/kontakty" className="nav-link">Контакты</Link>
           <Link href="/zapis" className="btn" style={{ marginLeft: '16px', padding: '10px 20px' }}>Записаться</Link>
@@ -89,6 +90,7 @@ export default function Navigation() {
 
               <Link href="/metody" onClick={closeMenus} className="mobile-nav-link">Метод</Link>
               <Link href="/astro" onClick={closeMenus} className="mobile-nav-link">Ведическая карта</Link>
+              <Link href="/chakry" onClick={closeMenus} className="mobile-nav-link">Система чакр</Link>
               <Link href="/blog" onClick={closeMenus} className="mobile-nav-link">Блог</Link>
               <Link href="/kontakty" onClick={closeMenus} className="mobile-nav-link">Контакты</Link>
 

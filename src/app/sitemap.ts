@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/uslugi/ostrye-sostoyaniya', priority: 0.8 },
     { url: '/metody', priority: 0.7 },
     { url: '/astro', priority: 0.7 },
+    { url: '/chakry', priority: 0.7 },
     { url: '/blog', priority: 0.7 },
     { url: '/kontakty', priority: 0.7 },
     { url: '/privacy-policy', priority: 0.3 },
