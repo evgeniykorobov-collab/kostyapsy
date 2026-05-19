@@ -2,7 +2,7 @@ export type Article = {
   slug: string;
   title: string;
   excerpt: string;
-  rubric: 'aptechka' | 'arkhitektura' | 'navigatsiya' | 'mayak' | 'vkus';
+  rubric: 'aptechka' | 'arkhitektura' | 'navigatsiya' | 'mayak' | 'vkus' | 'dizajn';
   rubricLabel: string;
   rubricColor: string;
   date: string;
@@ -10,6 +10,46 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+  {
+    slug: 'sintez-puti',
+    title: 'Синтез пути. Я — Алхимик, который не делит свет и тьму',
+    excerpt: 'Не набор техник и не эзотерический пазл. Я — Мастер Парадокса. Что я на самом деле продаю и почему мой главный метод — это я сам.',
+    rubric: 'mayak',
+    rubricLabel: 'Маяк в пути',
+    rubricColor: 'var(--color-accent-talents)',
+    date: '2026-05-19',
+    readMinutes: 6,
+  },
+  {
+    slug: 'krest-raya',
+    title: 'Крест Рая. Почему мой путь лежит через кризис и в чём его смысл',
+    excerpt: 'Правоугольный Крест Эдема в Дизайне Человека: ось 36/6 (Кризис/Интимность) и 12/11 (Тишина/Идеи). Архитектура моей миссии — переводчик с языка хаоса.',
+    rubric: 'dizajn',
+    rubricLabel: 'Мой Дизайн',
+    rubricColor: 'var(--color-accent-fears)',
+    date: '2026-05-19',
+    readMinutes: 7,
+  },
+  {
+    slug: '12-vorota-dizajn',
+    title: '12-е ворота. Мой дар Тишины и язык, рождённый в молчании',
+    excerpt: 'Ворота Осторожности в Дизайне Человека. Почему я не боюсь паузы в кабинете, и почему слова, рождённые после неё, обладают другой силой.',
+    rubric: 'dizajn',
+    rubricLabel: 'Мой Дизайн',
+    rubricColor: 'var(--color-accent-fears)',
+    date: '2026-05-19',
+    readMinutes: 6,
+  },
+  {
+    slug: 'zhiznennyj-put-4',
+    title: 'Мой Жизненный Путь 4. Исповедь Архитектора',
+    excerpt: 'Четвёрка — число Реальности. Не магия, а способ удержать магию в мире. Без 4 любой огонь — пожар, любой полёт — падение.',
+    rubric: 'mayak',
+    rubricLabel: 'Маяк в пути',
+    rubricColor: 'var(--color-accent-talents)',
+    date: '2026-05-19',
+    readMinutes: 6,
+  },
   {
     slug: 'totem-los',
     title: 'Мой тотем — Лось. Руна защиты и высшего пути',

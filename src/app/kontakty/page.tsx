@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Send, MapPin, Clock, Phone, Mail } from 'lucide-react';
+import { Send, MapPin, Clock, Phone, Mail, MessageCircle, Smartphone } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Контакты | Константин Альбертович, кризисный психолог',
@@ -39,6 +39,42 @@ export default function ContactsPage() {
                 style={{ alignSelf: 'flex-start', marginTop: '8px' }}
               >
                 Написать в Telegram
+              </a>
+            </div>
+
+            <div className="card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ width: '56px', height: '56px', borderRadius: '16px', backgroundColor: 'var(--color-bg-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <MessageCircle size={28} color="#25D366" />
+              </div>
+              <h3 style={{ fontSize: '1.4rem', margin: 0 }}>WhatsApp</h3>
+              <p style={{ color: 'var(--color-text-light)', margin: 0, lineHeight: 1.6 }}>
+                Если привычнее, чем Telegram — пишите сюда.
+              </p>
+              <a
+                href="https://wa.me/79954364645"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+                style={{ alignSelf: 'flex-start', marginTop: '8px', backgroundColor: '#25D366', borderColor: '#25D366' }}
+              >
+                Написать в WhatsApp
+              </a>
+            </div>
+
+            <div className="card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ width: '56px', height: '56px', borderRadius: '16px', backgroundColor: 'var(--color-bg-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Smartphone size={28} color="#0088FF" />
+              </div>
+              <h3 style={{ fontSize: '1.4rem', margin: 0 }}>MAX</h3>
+              <p style={{ color: 'var(--color-text-light)', margin: 0, lineHeight: 1.6 }}>
+                Если вы в российском мессенджере MAX — найдите меня по номеру телефона ниже и присоединяйтесь.
+              </p>
+              <a
+                href="tel:+79954364645"
+                className="btn btn-secondary"
+                style={{ alignSelf: 'flex-start', marginTop: '8px' }}
+              >
+                +7 995 436-46-45
               </a>
             </div>
 

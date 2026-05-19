@@ -52,9 +52,12 @@ export default function Navigation() {
             </AnimatePresence>
           </div>
           <Link href="/metody" className="nav-link">Метод</Link>
+          <Link href="/stoimost" className="nav-link">Стоимость</Link>
+          <Link href="/kejsy" className="nav-link">Кейсы</Link>
           <Link href="/astro" className="nav-link">Карта</Link>
           <Link href="/chakry" className="nav-link">Чакры</Link>
           <Link href="/blog" className="nav-link">Блог</Link>
+          <Link href="/faq" className="nav-link">FAQ</Link>
           <Link href="/kontakty" className="nav-link">Контакты</Link>
           <Link href="/zapis" className="btn" style={{ marginLeft: '16px', padding: '10px 20px' }}>Записаться</Link>
         </div>
@@ -89,9 +92,12 @@ export default function Navigation() {
               </div>
 
               <Link href="/metody" onClick={closeMenus} className="mobile-nav-link">Метод</Link>
+              <Link href="/stoimost" onClick={closeMenus} className="mobile-nav-link">Стоимость</Link>
+              <Link href="/kejsy" onClick={closeMenus} className="mobile-nav-link">Кейсы — Голоса с берега</Link>
               <Link href="/astro" onClick={closeMenus} className="mobile-nav-link">Ведическая карта</Link>
               <Link href="/chakry" onClick={closeMenus} className="mobile-nav-link">Система чакр</Link>
               <Link href="/blog" onClick={closeMenus} className="mobile-nav-link">Блог</Link>
+              <Link href="/faq" onClick={closeMenus} className="mobile-nav-link">FAQ</Link>
               <Link href="/kontakty" onClick={closeMenus} className="mobile-nav-link">Контакты</Link>
 
               <Link href="/zapis" onClick={closeMenus} className="btn" style={{ width: '100%', marginTop: '16px', justifyContent: 'center' }}>Записаться на консультацию</Link>
