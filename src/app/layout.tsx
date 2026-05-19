@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import FloatingContact from '@/components/FloatingContact';
 import CookieBanner from '@/components/CookieBanner';
 import JsonLd from '@/components/JsonLd';
+import YandexMetrika from '@/components/YandexMetrika';
 
 const lora = Lora({ subsets: ['cyrillic', 'latin'], variable: '--font-lora' });
 const inter = Inter({ subsets: ['cyrillic', 'latin'], variable: '--font-inter' });
@@ -56,6 +57,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${lora.variable}`}>
         <div className="texture-overlay"></div>
         <JsonLd />
+        <YandexMetrika />
         <Navigation />
         <main>{children}</main>
         <Footer />
