@@ -41,6 +41,16 @@ export const articles: Article[] = [
     readMinutes: 6,
   },
   {
+    slug: 'put-4-skala-i-veter',
+    title: 'Мой Жизненный Путь 4. Скала, о которую разбивается хаос',
+    excerpt: 'Пересчитал свою дату рождения (14.06.1982) и понял: я не только Ветер (Душа 5), но и Скала (Путь 4). Как эти двое подружились во мне и стали Домом на колёсах.',
+    rubric: 'mayak',
+    rubricLabel: 'Маяк в пути',
+    rubricColor: 'var(--color-accent-talents)',
+    date: '2026-05-21',
+    readMinutes: 7,
+  },
+  {
     slug: 'zhiznennyj-put-4',
     title: 'Мой Жизненный Путь 4. Исповедь Архитектора',
     excerpt: 'Четвёрка — число Реальности. Не магия, а способ удержать магию в мире. Без 4 любой огонь — пожар, любой полёт — падение.',
@@ -48,7 +58,7 @@ export const articles: Article[] = [
     rubricLabel: 'Маяк в пути',
     rubricColor: 'var(--color-accent-talents)',
     date: '2026-05-19',
-    readMinutes: 6,
+    readMinutes: 5,
   },
   {
     slug: 'totem-los',
